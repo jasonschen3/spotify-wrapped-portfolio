@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Wrapped Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/gt.svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Baskerville&display=swap"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/wrapped.css" />
+    <script src="script.js" defer></script>
+    <!-- SweetAlert2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Fix scalable on mobile-->
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+  </head>
+  <body>
+    <!--Desktop nav-->
+    <div class="top-nav">
+      <img src="images/gt.svg" alt="Georgia Tech" class="logo" />
+      <ul class="nav-links">
+        <li><a href="#team">Team</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#process">Process</a></li>
+      </ul>
+      <a
+        href="https://github.com/jneurauter/spotify-wrapped"
+        class="resume-btn"
+        target="_blank"
+        >Github</a
+      >
+      &nbsp;&nbsp;
+      <!-- CHANGE THE LINK TO THE ACTUAL VIDEO -->
+      <a href="https://youtu.be/5ocNBpGGqso" target="_blank" class="resume-btn"
+        >Video</a
+      >
+    </div>
+    <!--Mobile nav-->
+    <div class="mobile-nav">
+      <img src="images/gt.svg" alt="Georgia Tech" class="logo" />
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <div class="nav-menu">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        fill="currentColor"
+        class="bi bi-x"
+        viewBox="0 0 16 16"
+        onclick="toggleMenu()"
+      >
+        <path
+          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+        ></path>
+      </svg>
+      <ul>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#process">Process</a></li>
+        <li>
+          <a
+            href="https://github.com/jneurauter/spotify-wrapped"
+            class="resume-btn"
+            target="_blank"
+            >Github</a
+          >
+          &nbsp;&nbsp;
+          <!-- CHANGE THE LINK TO THE ACTUAL VIDEO -->
+          <a
+            href="https://youtu.be/5ocNBpGGqso"
+            target="_blank"
+            class="resume-btn"
+            >Video</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <h1>Spotify Wrapped</h1>
+      <p class="description">Helluva Developers (Group 28)</p>
+      <div class="project-pic">
+        <img src="images/project.png" alt="Project Picture" />
+      </div>
+      <div class="scroll-down">
+        <p>Scroll down</p>
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </div>
+    <div class="transition" id="transition1">
+      <svg width="100%" viewBox="0 0 1200 200" preserveAspectRatio="none">
+        <path d="M0,100 C300,200 900,0 1200,100 L1200,200 L0,200 Z"></path>
+      </svg>
+    </div>
+    <div class="content">
+      <div id="team">
+        <h2>Team</h2>
+        <br />
+        <!-- Jason Chen -->
+        <div class="card mb-5" id="jason">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img
+                src="images/jason.png"
+                class="img-fluid rounded-start"
+                alt="jason"
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h4 class="card-title">Jason</h4>
+                <h6>Scrum Master</h6>
+                <p class="card-text">
+                  Organized tasks for group via Trello, helped with frontend
+                  templates, worked with Jackson on music player, and made the
+                  revised portfolio to include Project 1 and 2.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Jackson Neurauter -->
+        <div class="card mb-5" id="jackson">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img
+                src="images/jackson.png"
+                class="img-fluid rounded-start"
+                alt="jackson"
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h4 class="card-title">Jackson</h4>
+                <h6>Full-Stack Lead</h6>
+                <p class="card-text">
+                  In collaboration with others implemented the music player,
+                  javascript for light and dark mode, javascript for static page
+                  translation, and set up web hosting using render.com. Also
+                  worked on front end on multiple pages as well as backend
+                  database interaction and saving.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Aidan Pietruszka-->
+        <div class="card mb-5" id="aidan">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img
+                src="images/aidan.png"
+                class="img-fluid rounded-start"
+                alt="aidan"
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h4 class="card-title">Aidan</h4>
+                <h6>Backend Lead</h6>
+                <p class="card-text">TBD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Vincent Tran -->
+        <div class="card mb-5" id="vincent">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img
+                src="images/vincent.png"
+                class="img-fluid rounded-start"
+                alt="vincent"
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h4 class="card-title">Vincent</h4>
+                <h6>Backend Developer</h6>
+                <p class="card-text">
+                  Worked on the main wrapped section of the project. Implemented
+                  the slideshow structure and helped with CSS and JavaScript
+                  sections of the wrapper. Also provided example Spotify account
+                  for testing website functions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Kishan Patel-->
+        <div class="card mb-5" id="kishan">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img
+                src="images/kishan.png"
+                class="img-fluid rounded-start"
+                alt="kishan"
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h4 class="card-title">Kishan</h4>
+                <h6>Product Owner/Frontend Developer</h6>
+                <p class="card-text">TBD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--App-->
+      <div id="app">
+        <h2>App Function</h2>
+        <br />
+        <div class="card mb-5" id="app-card">
+          <div class="row g-0"></div>
+          <div class="col-md-12">
+            <div class="card-body">
+              <p>
+                Our app features all the user stories and needs. We designed a
+                site that takes in a user's preferred food, location in Atlanta,
+                and various filters and outputs the highest rated restaurants in
+                the Atlanta area. The design was inspired by Yelp's site,
+                includes authentication, and allows favorites which is displayed
+                in the user profile.
+              </p>
+              <p>
+                Specifically, the web app my team designed features a home page
+                that serves as the central hub for users, allowing access to all
+                the other features of the project in a centralized location. The
+                main functionality of the project lies in the restaurant search
+                bar, which allows users to search for restaurants by name or
+                category, helping them find specific dining options or explore
+                different types of cuisine. This feature directly aligns with
+                the user story: "As a customer, I want to search for restaurants
+                by name, so that I can quickly find a specific restaurant I’m
+                looking for." The profile page lists out the user's personal
+                information including a changeable username and the list of
+                favorited restaurants. Finally, the project uses the built in
+                Django authentication system for sign up and sign in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Process-->
+      <div id="process">
+        <h2>Process</h2>
+        <br />
+        <div class="card mb-5" id="process-card">
+          <div class="row g-0">
+            <div class="col-md-12">
+              <div class="card-body">
+                <p class="card-text">
+                  The Scrum process for this project involved a collaborative
+                  effort between team members, each contributing to different
+                  aspects of the development. After our initial sprint
+                  plannings, we stuck as close as possible to our plan. As the
+                  Scrum Master, Jason Chen organized tasks using Trello,
+                  ensuring smooth coordination of the project and tracked work
+                  to ensure steady progress. He also worked closely with Kishan
+                  on developing frontend templates and Jackson with the video
+                  player. Jackson, the Full-Stack Lead, played a crucial role in
+                  implementing the music player, light & dark mode, and static
+                  page translation, while also helped set up hosting for the
+                  final product. For keeping track of all the implementations,
+                  we used Trello to track the tasks.
+                </p>
+                <figure>
+                  <img src="images/trello.png" alt="Trello" />
+                  <figcaption>
+                    <em>Trello planning TO BE UPDATED</em>
+                  </figcaption>
+                </figure>
+                <br />
+                <p>
+                  Aidan (TO BE FIXED), as the Backend Lead, focused on
+                  integrating the Google APIs to pull restaurant data,
+                  displaying markers on the map, and working with Jackson to
+                  filter and display restaurant lists based on user inputs.
+                  Vincent contributed heavily to the user authentication process
+                  and helped build the favorites feature, ensuring users could
+                  manage their favorite restaurants. Meanwhile, Kishan, the
+                  Product Owner and Frontend Developer, designed the pages and
+                  layout using Figma while contributing to frontend development.
+                </p>
+                <figure>
+                  <img src="images/figma-wrapped.png" alt="Figma" />
+                  <figcaption><em>Figma</em></figcaption>
+                </figure>
+                <br />
+                <p>
+                  Each team member worked in tandem to ensure the user needs
+                  were met, with everyone contributing to the Scrum process and
+                  keeping the team aligned on priorities. The daily updates were
+                  also useful to keep track of progress. We were more efficient
+                  for this project than the last one because we were more
+                  familiar with Django and the scrum process. We enjoyed working
+                  on this more challenging project and seeing our Spotify
+                  wrapped early!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="transition" id="transition2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill-opacity="1"
+          d="M0,32L34.3,48C68.6,64,137,96,206,112C274.3,128,343,128,411,112C480,96,549,64,617,74.7C685.7,85,754,139,823,170.7C891.4,203,960,213,1029,192C1097.1,171,1166,117,1234,90.7C1302.9,64,1371,64,1406,64L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+  </body>
+</html>
